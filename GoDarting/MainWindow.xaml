@@ -1,0 +1,28 @@
+﻿<Window xmlns:my="clr-namespace:GoDartingUserControls;assembly=GoDartingUIElements"    x:Class="GoDarting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
+        Title="Darts Game By Harsh Maurya" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" x:Name="mainWindow"
+        xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit" >
+    <Window.Resources>
+        <Style TargetType="{x:Type toolkit:MessageBox}" x:Key="MessageBoxStyle">
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="BorderBrush" Value="Black" />
+            <Setter Property="CaptionForeground" Value="White" />
+            <Setter Property="WindowBorderBrush" Value="White" />
+            <Setter Property="WindowBackground" Value="Black" />
+            <Setter Property="WindowOpacity" Value="0.3" />
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontFamily" Value="Cooper"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+    </Window.Resources>
+
+
+        <Grid x:Name="mainGrid">
+        
+        <my:StartupScreen HorizontalAlignment="Left" Name="startupScreen" VerticalAlignment="Top"/>
+        <ProgressBar Height="19" HorizontalAlignment="Left" Margin="344,264,0,0" Name="progressBar" VerticalAlignment="Top" Width="131" IsIndeterminate="True" Visibility="Hidden"
+                     Background="Black" Foreground="DeepSkyBlue"/>
+            
+    </Grid>
+</Window>

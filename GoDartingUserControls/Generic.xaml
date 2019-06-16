@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    >
+
+            <Style x:Key="backgroundColor" TargetType="Grid">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="#10999E" Offset="0.3"/>
+                    <GradientStop Color="#530686" Offset="0.9"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate TargetType="Button" x:Key="ObamaButton">
+        <Grid>
+            <Image Source="Images/obama.png" HorizontalAlignment="Left"/>
+            <ContentPresenter HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Margin="5"/>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate TargetType="Button" x:Key="SymondsButton">
+        <Grid>
+            <Image Source="Images/symonds.png" HorizontalAlignment="Left"/>
+            <ContentPresenter HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Margin="5"/>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate TargetType="Button" x:Key="BradButton">
+        <Grid>
+            <Image Source="Images/brad.png" HorizontalAlignment="Left"/>
+            <ContentPresenter HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Margin="5"/>
+        </Grid>
+    </ControlTemplate>
+    <ControlTemplate TargetType="Button" x:Key="KohliButton">
+        <Grid>
+            <Image Source="Images/kohli.png" HorizontalAlignment="Left"/>
+            <ContentPresenter HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Margin="5"/>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate TargetType="Button" x:Key="ManmohanButton">
+        <Grid>
+            <Image Source="Images/manmohan.png" HorizontalAlignment="Left"/>
+            <ContentPresenter HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Margin="5"/>
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate TargetType="Button" x:Key="HarshButton">
+        <Grid>
+            <Image Source="Images/harsh.png" HorizontalAlignment="Left"/>
+            <ContentPresenter HorizontalAlignment="Center"
+                              VerticalAlignment="Center"
+                              Margin="5"/>
+        </Grid>
+    </ControlTemplate>
+
+</ResourceDictionary>

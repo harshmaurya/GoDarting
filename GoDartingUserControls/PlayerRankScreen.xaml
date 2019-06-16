@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="GoDartingUserControls.PlayerRankScreen"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800"
+             xmlns:dg="http://schemas.microsoft.com/wpf/2008/toolkit">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ButtonStyle.xaml"/>
+                <ResourceDictionary Source="Generic.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid  x:Name="MainGrid" Style="{StaticResource backgroundColor}" Width="800" Height="600" Loaded="MainGrid_Loaded">
+        
+        <dg:DataGrid IsReadOnly="True" AutoGenerateColumns="False" HorizontalAlignment="Center" Name="dataGridToppers" VerticalAlignment="Top" Margin="0,55,0,0" 
+          Foreground="Black" AlternatingRowBackground="DarkTurquoise" CanUserSortColumns="False"
+          FontFamily="Calibri" FontSize="14" >
+            <dg:DataGrid.Resources>
+                <Style TargetType="{x:Type dg:DataGridColumnHeader}">                    
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="FontSize" Value="14"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </Style>
+            </dg:DataGrid.Resources>
+
+            <dg:DataGrid.Columns>
+                <dg:DataGridTextColumn Header="Name" Binding="{Binding Path=PlayerFirstName}" />
+                <dg:DataGridTextColumn Header="Username" Binding="{Binding Path=PlayerUserName}" />
+                <dg:DataGridTextColumn Header="Highest Score" Binding="{Binding Path=HighestScore}" />
+            </dg:DataGrid.Columns>
+        </dg:DataGrid>
+        <Button Style="{StaticResource BWButton}" Content="Main Menu" Height="27" HorizontalAlignment="Left" Margin="293,494,0,0" Name="btnMainMenu" VerticalAlignment="Top" Width="84" Click="btnMainMenu_Click" />
+        <Button Content="Reload List" Height="27" HorizontalAlignment="Left" Margin="423,494,0,0" Name="btnReload" Style="{StaticResource BWButton}" VerticalAlignment="Top" Width="84" Click="btnReload_Click" />
+        <TextBlock Height="27" HorizontalAlignment="Left" Margin="293,22,0,0" Name="textBlock1" Text="Top 20 players" VerticalAlignment="Top" Width="214" FontFamily="Cooper" FontSize="18" Foreground="#FF114169" TextAlignment="Center" />
+    </Grid>
+</UserControl>
